@@ -63,9 +63,10 @@ def rectangle():
                 (x - 785) * (x - 785) + (y - 35) * (y - 35) < 225 or
                 (x - 35) * (x - 35) + (y - 485) * (y - 485) < 225 or
                 (x - 785) * (x - 785) + (y - 485) * (y - 485) < 225):
-            victory()
+            print("YOU WON!")
+            #victory()
         elif velocity > 0:
-            base.after(80, drawO)
+            base.after(50, drawO)
         else:
             newInputs()
 
@@ -126,7 +127,7 @@ def rectangle():
 
     canvas.create_text(x, y, text="o", fill="black", font=("Arial", 20), tags="o")
     line = canvas.create_line(x, y, xLineEnd, yLineEnd, fill="red", tags="line")
-    base.after(80, drawO)
+    base.after(50, drawO)
 
     base.mainloop()
 
